@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.currentUser = this.loginService.currentUserValue;
     this.currentUser.fechaModificacion = new Date(this.currentUser.fechaModificacion);
-     if(this.myDate.getMonth() - (this.currentUser.fechaModificacion.getMonth()-2)!=0){
+     if(this.myDate.getMonth() - (this.currentUser.fechaModificacion.getMonth())!=0){
      // console.log("Actualizar password, la ultima vez actualizada fue hace "+ (this.myDate.getMonth() - (this.currentUser.fechaModificacion.getMonth()-2))+" meses");
      Swal.fire({
       title: 'Ingresa Nuevo Password',
